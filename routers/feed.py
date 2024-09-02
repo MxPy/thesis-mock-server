@@ -5,8 +5,8 @@ import schemas
 
 
 router = APIRouter(
-    prefix='/social',
-    tags=['social'])
+    prefix='/feed',
+    tags=['feed'])
 
 feedpost = {
     "post_id": 0, #db key
@@ -211,6 +211,6 @@ feed = [
 def health_check(post_id: int):
     return feedpost
 
-@router.get("/feed")
-def health_check():
+@router.get("/popular")
+def Feed():
     return feed
