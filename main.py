@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from routers import feed, comment_feed
+from routers import feed, comment_feed, sensors
 import uvicorn
 
 
@@ -23,6 +23,7 @@ def health_check():
 
 app.include_router(feed.router)
 app.include_router(comment_feed.router)
+app.include_router(sensors.router)
 
 if __name__ == '__main__':
     uvicorn.run("main:app", host="0.0.0.0", port=8000, log_level="info", reload=True)
