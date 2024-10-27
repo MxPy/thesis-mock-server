@@ -13,8 +13,8 @@ class MinioClient:
         self, bucket_name: str
     ):
         self.client = Minio("minio:9000",
-            access_key="1gChMbuKnV90oeilViv3",
-            secret_key="tkHw9rnjfA9G6bxnvTV5UiYpVpsT6l9d6ms46Gnp",
+            access_key="",
+            secret_key="",
             secure=settings.MINIO_SECURE,
         )
         self.bucket_name = bucket_name
