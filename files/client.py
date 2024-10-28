@@ -13,8 +13,8 @@ class MinioClient:
         self, bucket_name: str
     ):
         self.client = Minio("minio:9000",
-            access_key="",
-            secret_key="",
+            access_key=settings.ACCESS_KEY,
+            secret_key=settings.SECRET_KEY,
             secure=settings.MINIO_SECURE,
         )
         self.bucket_name = bucket_name
@@ -28,7 +28,7 @@ class MinioClient:
         logger.info("upload file")
         try:
             #temp
-            self.create_bucket()
+            #self.create_bucket()
             #temp
             self.client.put_object(
                 bucket_name=self.bucket_name,
