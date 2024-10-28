@@ -11,8 +11,8 @@ class Settings(BaseSettings):
     MINIO_SECURE: bool = False
     MINIO_BUCKET_NAME: str = "minio-bucket"
     MINIO_URI: str = None
-    ACCESS_KEY: str = "0jQacywIB6IhLFF4KDAi"
-    SECRET_KEY: str = "FaDvFxLECjveComMGLQN8Jj1hDOor2hJo2EGGvNa"
+    ACCESS_KEY: str = ""
+    SECRET_KEY: str = ""
 
     @root_validator
     def uri_validator(cls, values) -> dict:
