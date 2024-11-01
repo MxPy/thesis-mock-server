@@ -12,7 +12,7 @@ class MinioClient:
     def __init__(
         self, bucket_name: str
     ):
-        self.client = Minio("minio:9000",
+        self.client = Minio(f"{settings.MINIO_HOST}:{settings.MINIO_PORT}",
             access_key=settings.ACCESS_KEY,
             secret_key=settings.SECRET_KEY,
             secure=settings.MINIO_SECURE,
